@@ -1,0 +1,7 @@
+C:\MyProject\ProjectBE\CSharp\HomemadeCakes\obj\Debug\net5.0\HomemadeCakes.csproj.AssemblyReference.cache
+C:\MyProject\ProjectBE\CSharp\HomemadeCakes\obj\Debug\net5.0\HomemadeCakes.GeneratedMSBuildEditorConfig.editorconfig
+C:\MyProject\ProjectBE\CSharp\HomemadeCakes\obj\Debug\net5.0\HomemadeCakes.AssemblyInfoInputs.cache
+C:\MyProject\ProjectBE\CSharp\HomemadeCakes\obj\Debug\net5.0\HomemadeCakes.AssemblyInfo.cs
+C:\MyProject\ProjectBE\CSharp\HomemadeCakes\obj\Debug\net5.0\HomemadeCakes.csproj.CoreCompileInputs.cache
+C:\MyProject\ProjectBE\CSharp\HomemadeCakes\obj\Debug\net5.0\HomemadeCakes.MvcApplicationPartsAssemblyInfo.cs
+C:\MyProject\ProjectBE\CSharp\HomemadeCakes\obj\Debug\net5.0\HomemadeCakes.MvcApplicationPartsAssemblyInfo.cache
