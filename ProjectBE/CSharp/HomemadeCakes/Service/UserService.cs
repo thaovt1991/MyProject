@@ -11,19 +11,19 @@ namespace HomemadeCakes.Service
     public class UserService
     {
         private readonly IMongoCollection<User> _users;
-        //private const string ConnectionString = "mongodb://localhost:27017";
-        //private const string DatabaseName = "HomemadeCakes";
-        //private const string UsersCollectionName = "Users";
+        private const string ConnectionString = "mongodb://localhost:27017";
+        private const string DatabaseName = "HomemadeCakes";
+        private const string UsersCollectionName = "User";
         public UserService(IOptions<ConnectDatabaseSettings> conectDatabaseSettings)
         {
-            //var client = new MongoClient(ConnectionString);
-            //var database = client.GetDatabase(DatabaseName);
+            var client = new MongoClient(ConnectionString);
+            var database = client.GetDatabase(DatabaseName);
 
-            //_users = database.GetCollection<User>(CollectionName);
-            var client = new MongoClient(conectDatabaseSettings.Value.ConnectionString);
-            var database = client.GetDatabase(conectDatabaseSettings.Value.DatabaseName);
+            _users = database.GetCollection<User>(UsersCollectionName);
+            //var client = new MongoClient(conectDatabaseSettings.Value.ConnectionString);
+            //var database = client.GetDatabase(conectDatabaseSettings.Value.DatabaseName);
 
-            _users = database.GetCollection<User>(conectDatabaseSettings.Value.CollectionName);
+            //_users = database.GetCollection<User>(conectDatabaseSettings.Value.CollectionName);
         }
 
         public List<User> Get() =>

@@ -59,6 +59,12 @@ namespace HomemadeCakes
             app.UseRouting();
 
             app.UseAuthorization();
+            //swagger
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "HomemadeCakes V1");
+            });
 
             app.UseEndpoints(endpoints =>
             {

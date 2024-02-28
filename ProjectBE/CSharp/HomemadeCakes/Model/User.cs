@@ -17,8 +17,7 @@ namespace HomemadeCakes.Model
 
         public Guid RecID { get; set; }
 
-        [BsonElement("Name")]
-        public string Name { get; set; }
+        public string UserID { get; set; }
 
         public string UserName { get; set; }
 
@@ -29,5 +28,9 @@ namespace HomemadeCakes.Model
         public DateTime CreatedOn { get; set; }
 
         public string CreatedBy { get; set; }
+
+        public DateTime ModifiedOn { get; set; }
+
+        public string ModifiedBy { get; set; }
     }
 }
