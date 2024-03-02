@@ -12,8 +12,8 @@ namespace HomemadeCakes.Service
     {
         private readonly IMongoCollection<User> _users;
         private const string ConnectionString = "mongodb://localhost:27017";
-        private const string DatabaseName = "HomemadeCakes";
-        private const string UsersCollectionName = "User";
+        private const string DatabaseName = "HomemadeCakesDatabase";
+        private const string UsersCollectionName = "Users";
         public UserService(IOptions<ConnectDatabaseSettings> conectDatabaseSettings)
         {
             var client = new MongoClient(ConnectionString);
@@ -53,9 +53,10 @@ namespace HomemadeCakes.Service
         public async Task<User?> GetAsync(string id) =>
             await _users.Find(x => x.Id == id).FirstOrDefaultAsync();
 
-        public async Task CreateAsync(User newUser) =>
+        public async Task CreateAsync(User newUser){
+            newUser.CreatedOn = DateTime.Now;
             await _users.InsertOneAsync(newUser);
-
+    }
         public async Task UpdateAsync(string id, User updatedUser) =>
             await _users.ReplaceOneAsync(x => x.Id == id, updatedUser);
 

@@ -10,7 +10,6 @@ namespace HomemadeCakes.Model
     public class User
     {
 
-
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
@@ -29,7 +28,7 @@ namespace HomemadeCakes.Model
 
         public string CreatedBy { get; set; }
 
-        public DateTime ModifiedOn { get; set; }
+        public DateTime? ModifiedOn { get; set; }
 
         public string ModifiedBy { get; set; }
     }

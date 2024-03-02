@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HomemadeCakes.Model;
+using MongoDB.Driver;
 
 namespace HomemadeCakes
 {
@@ -29,14 +30,23 @@ namespace HomemadeCakes
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            // MongoDB- cach 1
+            //services.AddScoped<IMongoClient, MongoClient>(provider =>
+            //{
+            //    var connectionString = Configuration.GetConnectionString("MongoDB");
+            //    return new MongoClient(connectionString);
+            //});
+
+            // ...
+
+            //services.AddMvc();
+
+            // MongoDB- cach 2
             services.Configure<ConnectDatabaseSettings>(Configuration.GetSection("HomemadeCakesDatabase"));
             services.AddSingleton<UserService>();
-            //services.AddSingleton<IMongoOptions>(sp => sp.GetRequiredService<IOptions<MongoOptions>>().Value);
-            //services.AddSingleton<MongoDbContext>();
-
-            services.AddSingleton<UserService>();
             services.AddControllers().AddJsonOptions(
-            options => options.JsonSerializerOptions.PropertyNamingPolicy = null); 
+            options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
 
             services.AddSwaggerGen(c =>
             {
