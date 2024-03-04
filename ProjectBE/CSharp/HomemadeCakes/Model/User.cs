@@ -16,6 +16,10 @@ namespace HomemadeCakes.Model
 
         public Guid RecID { get; set; }
 
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
+
         public string UserID { get; set; }
 
         public string UserName { get; set; }
@@ -31,5 +35,9 @@ namespace HomemadeCakes.Model
         public DateTime? ModifiedOn { get; set; }
 
         public string ModifiedBy { get; set; }
+
+        public string PhoneNumber { get; set; }
+
+        public string Email { get; set; }
     }
 }

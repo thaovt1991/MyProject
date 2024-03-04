@@ -59,3 +59,12 @@ C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\Swashbuck
 C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\Swashbuckle.Core.dll
 C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\WebActivatorEx.dll
 C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\obj\Debug\net5.0\HomemadeCakes.csproj.AssemblyReference.cache
+C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\Microsoft.IdentityModel.Abstractions.dll
+C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll

@@ -43,11 +43,17 @@ namespace HomemadeCakes
             //services.AddMvc();
 
             // MongoDB- cach 2
-            services.Configure<ConnectDatabaseSettings>(Configuration.GetSection("HomemadeCakesDatabase"));
+            //services.Configure<ConnectDatabaseSettings>(Configuration.GetSection("HomemadeCakesDatabase"));
+
             services.AddSingleton<UserService>();
+       
             services.AddControllers().AddJsonOptions(
             options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
-
+            //doi json va doc dât json..
+            services.AddControllers().AddNewtonsoftJson(options =>
+            {
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "HomemadeCakes", Version = "v1" });

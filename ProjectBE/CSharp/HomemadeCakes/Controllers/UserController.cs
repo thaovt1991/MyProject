@@ -1,4 +1,5 @@
 ﻿using HomemadeCakes.Model;
+using HomemadeCakes.ModelView;
 using HomemadeCakes.Service;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -29,7 +30,7 @@ namespace HomemadeCakes.Controllers
         [HttpGet("{id:length(24)}")]
         public async Task<ActionResult<User>> Get(string id)
         {
-            var user = await _usersService.GetAsync(id);
+            var user = await _usersService.GetOneAsync(id);
 
             if (user is null)
             {
@@ -50,7 +51,7 @@ namespace HomemadeCakes.Controllers
         [HttpPut("{id:length(24)}")]
         public async Task<IActionResult> Update(string id, User updatedBook)
         {
-            var user = await _usersService.GetAsync(id);
+            var user = await _usersService.GetOneAsync(id);
 
             if (user is null)
             {
@@ -67,7 +68,7 @@ namespace HomemadeCakes.Controllers
         [HttpDelete("{id:length(24)}")]
         public async Task<IActionResult> Delete(string id)
         {
-            var user = await _usersService.GetAsync(id);
+            var user = await _usersService.GetOneAsync(id);
 
             if (user is null)
             {
@@ -78,6 +79,13 @@ namespace HomemadeCakes.Controllers
 
             return NoContent();
         }
+
+        //[HttpPost]
+        //[Route("/api/login")]
+        //public async Task<string> GetLoginAsync([FromBody] LoginRequest login)
+        //{
+        //    return await _usersService.Authencate(login);
+        //}
     }
 
 }
