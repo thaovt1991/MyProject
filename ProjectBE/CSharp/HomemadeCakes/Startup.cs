@@ -15,6 +15,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using HomemadeCakes.Model;
 using MongoDB.Driver;
+using Amazon.Runtime.Internal.Transform;
 
 namespace HomemadeCakes
 {
@@ -46,7 +47,7 @@ namespace HomemadeCakes
             //services.Configure<ConnectDatabaseSettings>(Configuration.GetSection("HomemadeCakesDatabase"));
 
             services.AddSingleton<UserService>();
-       
+
             services.AddControllers().AddJsonOptions(
             options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
             //doi json va doc dât json..
@@ -57,6 +58,29 @@ namespace HomemadeCakes
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "HomemadeCakes", Version = "v1" });
+
+                c.AddSecurityDefinition(name: "Bearer", securityScheme: new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Description = "Enter the Bearer Authorization string as following: `Bearer Generated-JWT-Token`",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer"
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id ="Bearer"
+                            }, Scheme ="auth2" ,
+                            Name = "Bearer",
+                            In = ParameterLocation.Header,
+                        },  new List<string>()
+                } }); 
             });
         }
 
@@ -71,7 +95,7 @@ namespace HomemadeCakes
             }
 
             app.UseHttpsRedirection();
-
+            app.UseAuthentication();
             app.UseRouting();
 
             app.UseAuthorization();

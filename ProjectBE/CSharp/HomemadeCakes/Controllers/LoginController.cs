@@ -16,7 +16,7 @@ namespace HomemadeCakes.Controllers
         public LoginController(UserService UserService) =>
             _usersService = UserService;
 
-        [HttpPost]
+        [HttpPut]
         public async Task<string> GetLoginAsync([FromBody] LoginRequest login)
         {
             return await _usersService.Authencate(login);
