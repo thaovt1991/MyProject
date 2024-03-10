@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-layout',
@@ -45,7 +46,11 @@ export class PageLayoutComponent implements OnInit {
     ]
   };
 
-  constructor() {}
+  isLogIn = true
+
+  constructor(
+    private router : Router 
+  ) {}
   addSlide() {
     this.slides.push({ img: 'http://placehold.it/350x150/777777' });
   }
@@ -66,4 +71,14 @@ export class PageLayoutComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  click(e :any){
+    this.router.navigate(['/', 'login'])
+    // this.router.navigateByUrl('/loginsssss').then(nav => {
+    //   console.log(nav); // true if navigation is successful
+    // }, err => {
+    //   console.log(err) // when there's an error
+    //   this.router.navigate(['/', 'login'])
+    // });;
+  }
 }

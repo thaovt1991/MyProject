@@ -297,30 +297,18 @@ svg#clouds {
   src: url("/assets/fonts/DancingScript-VariableFont_wght.ttf");
 }
 
-/* css .carousel-*/
-/* .slick-prev:before,
-.slick-next :before {
-  color: black !important;
-}
 
-.img-style {
-  margin-left: auto;
-  margin-left: auto;
-  height: 250;
-  width: 250;
-}
-@media (max-width: 992) {
-  .img-style {
-    margin-left: 10px !important;
-    margin-right: 10px !important;
-  }
-} */
 .style-cakes {
   width: 1000px !important;
   height: 100px !important ;
   margin-left: 10% !important;
   margin-right: 10% !important;
   margin-top: 50px !important;
+}
+.text-menu{
+  color: #ffffff !important;
+  margin: 5px !important;
+cursor: pointer;
 }
 
 /* end css */

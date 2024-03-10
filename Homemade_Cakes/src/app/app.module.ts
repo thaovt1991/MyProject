@@ -10,10 +10,12 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ServiceModule } from './page-layout/service.module';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './service/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
   ],
   imports: [
     HttpClientModule,

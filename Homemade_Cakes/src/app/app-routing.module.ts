@@ -1,10 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PageLayoutComponent } from './page-layout/page-layout.component';
+import { LoginComponent } from './service/login/login.component';
 
 const routes: Routes = [
   {
-    path :'' ,component : PageLayoutComponent , pathMatch:'full'
+    path :'home' ,
+    component : PageLayoutComponent ,
+     pathMatch:'full'
+  },
+  {
+    path :'login' ,
+    component : LoginComponent ,
+     pathMatch:'full'
   }
 ];
 
