@@ -1,1 +1,15 @@
-Login vào đây
+<form
+  autocomplete="off"
+  #loginForm="ngForm"
+  (ngSubmit)="loginAccount(loginForm.value)"
+>
+  <div class="form-group">
+    <label for="userName">User Name</label>
+    <input name="userName" [(ngModel)]="user.userName" type="text" class="form-control" required minlength="3">
+    <!-- <pre>{{ loginForm.controls.userName?.errors | json }}</pre> -->
+
+    <label for="password">Mật khẩu</label>
+    <input  name="password" ngModel type="text" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary mr-1">Save</button>
+</form>

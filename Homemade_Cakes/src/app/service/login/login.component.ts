@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import * as CryptoJS from 'crypto-js';
 
 @Component({
@@ -7,6 +7,7 @@ import * as CryptoJS from 'crypto-js';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+
   decrypted =''
   request=''
   responce=''
@@ -14,6 +15,11 @@ export class LoginComponent {
   encrypted: any = "";
    constructor() {
 
+   }
+
+   user ={
+    userName :'',
+    password :''
    }
 
 
@@ -41,5 +47,9 @@ export class LoginComponent {
         mode: CryptoJS.mode.ECB,
         padding: CryptoJS.pad.Pkcs7
       }).toString(CryptoJS.enc.Utf8);
+  }
+
+  loginAccount(e : any){
+
   }
 }
