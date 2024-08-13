@@ -1,0 +1,141 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\service\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:service\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\data\\hcdbcontextfactory .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:data\\hcdbcontextfactory .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\data\\hcdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:data\\hcdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\configuration\\util\\exceptions\\hcexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:configuration\\util\\exceptions\\hcexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{99b8fa2f-ab90-4f57-9c32-949f146f1914}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "Service\\UserService.cs",
+              "ToolTip": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Service\\UserService.cs",
+              "RelativeToolTip": "Service\\UserService.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAowCwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T16:34:04.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Service\\IUserService.cs",
+              "RelativeDocumentMoniker": "Service\\IUserService.cs",
+              "ToolTip": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Service\\IUserService.cs",
+              "RelativeToolTip": "Service\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T16:34:03.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HCDbContextFactory .cs",
+              "DocumentMoniker": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Data\\HCDbContextFactory .cs",
+              "RelativeDocumentMoniker": "Data\\HCDbContextFactory .cs",
+              "ToolTip": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Data\\HCDbContextFactory .cs",
+              "RelativeToolTip": "Data\\HCDbContextFactory .cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T16:33:50.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HCDbContext.cs",
+              "DocumentMoniker": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Data\\HCDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\HCDbContext.cs",
+              "ToolTip": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Data\\HCDbContext.cs",
+              "RelativeToolTip": "Data\\HCDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T16:33:48.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HCException.cs",
+              "DocumentMoniker": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Configuration\\Util\\Exceptions\\HCException.cs",
+              "RelativeDocumentMoniker": "Configuration\\Util\\Exceptions\\HCException.cs",
+              "ToolTip": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Configuration\\Util\\Exceptions\\HCException.cs",
+              "RelativeToolTip": "Configuration\\Util\\Exceptions\\HCException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T16:33:39.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T16:33:30.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T16:33:23.931Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

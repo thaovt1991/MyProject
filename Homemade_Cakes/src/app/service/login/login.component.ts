@@ -1,26 +1,41 @@
-import { Component, ViewChild } from '@angular/core';
+
 import * as CryptoJS from 'crypto-js';
+import { Component, ViewChild,
+  ViewEncapsulation,
+  OnInit,
+  OnChanges,
+  SimpleChanges,
+  ChangeDetectorRef,
+} from '@angular/core';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
-
+export class LoginComponent implements OnInit{
   decrypted =''
   request=''
   responce=''
   tokenFromUI: string = "0123456789123456";
   encrypted: any = "";
-   constructor() {
+   constructor(
+    private changeDef : ChangeDetectorRef
+   ){
 
    }
+   
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
    user ={
     userName :'',
-    password :''
+    password :'',
+    confirmPass:''
    }
+
+   isFormLogin = true;
 
 
 
@@ -50,6 +65,11 @@ export class LoginComponent {
   }
 
   loginAccount(e : any){
+    debugger
+  }
 
+  openForm(e: string){
+   this.isFormLogin = e== 'logIn' ;
+   this.changeDef.detectChanges();
   }
 }
