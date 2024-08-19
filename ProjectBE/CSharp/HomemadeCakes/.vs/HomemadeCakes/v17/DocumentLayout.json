@@ -7,28 +7,44 @@
       "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\service\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:service\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\data\\hcdbcontextfactory .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:data\\hcdbcontextfactory .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\modelview\\system\\users\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:modelview\\system\\users\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\data\\hcdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:data\\hcdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\configuration\\util\\exceptions\\hcexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:configuration\\util\\exceptions\\hcexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\service\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:service\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\modelview\\system\\users\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:modelview\\system\\users\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\data\\hcdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:data\\hcdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\data\\hcdbcontextfactory .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:data\\hcdbcontextfactory .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|c:\\myproject\\myproject\\projectbe\\csharp\\homemadecakes\\common\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CC8AAE5-33E1-4E89-BD2E-AAB3EC47D1EC}|HomemadeCakes.csproj|solutionrelative:common\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,15 +54,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{99b8fa2f-ab90-4f57-9c32-949f146f1914}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-19T17:03:41.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\ModelView\\System\\Users\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "ModelView\\System\\Users\\LoginRequest.cs",
+              "ToolTip": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\ModelView\\System\\Users\\LoginRequest.cs",
+              "RelativeToolTip": "ModelView\\System\\Users\\LoginRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T17:03:36.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\ModelView\\System\\Users\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "ModelView\\System\\Users\\RegisterRequest.cs",
+              "ToolTip": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\ModelView\\System\\Users\\RegisterRequest.cs",
+              "RelativeToolTip": "ModelView\\System\\Users\\RegisterRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T17:03:32.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Helper.cs",
+              "DocumentMoniker": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Common\\Helper.cs",
+              "RelativeDocumentMoniker": "Common\\Helper.cs",
+              "ToolTip": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Common\\Helper.cs",
+              "RelativeToolTip": "Common\\Helper.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T16:57:16.566Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -56,14 +120,14 @@
               "RelativeDocumentMoniker": "Service\\UserService.cs",
               "ToolTip": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Service\\UserService.cs",
               "RelativeToolTip": "Service\\UserService.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAowCwAAAAMAAAA",
+              "ViewState": "AQIAADcAAAAAAAAAAAAcwEEAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-24T16:34:04.012Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Service\\IUserService.cs",
               "RelativeDocumentMoniker": "Service\\IUserService.cs",
@@ -71,23 +135,25 @@
               "RelativeToolTip": "Service\\IUserService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T16:34:03.235Z"
+              "WhenOpened": "2024-06-24T16:34:03.235Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "HCDbContextFactory .cs",
               "DocumentMoniker": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Data\\HCDbContextFactory .cs",
               "RelativeDocumentMoniker": "Data\\HCDbContextFactory .cs",
               "ToolTip": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Data\\HCDbContextFactory .cs",
               "RelativeToolTip": "Data\\HCDbContextFactory .cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAACfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T16:33:50.195Z"
+              "WhenOpened": "2024-06-24T16:33:50.195Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "HCDbContext.cs",
               "DocumentMoniker": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Data\\HCDbContext.cs",
               "RelativeDocumentMoniker": "Data\\HCDbContext.cs",
@@ -95,11 +161,12 @@
               "RelativeToolTip": "Data\\HCDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T16:33:48.187Z"
+              "WhenOpened": "2024-06-24T16:33:48.187Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "HCException.cs",
               "DocumentMoniker": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Configuration\\Util\\Exceptions\\HCException.cs",
               "RelativeDocumentMoniker": "Configuration\\Util\\Exceptions\\HCException.cs",
@@ -107,7 +174,8 @@
               "RelativeToolTip": "Configuration\\Util\\Exceptions\\HCException.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T16:33:39.875Z"
+              "WhenOpened": "2024-06-24T16:33:39.875Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -117,21 +185,23 @@
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
               "ToolTip": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAACgAAAAAAAAAAAAuwFYAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T16:33:30.041Z"
+              "WhenOpened": "2024-06-24T16:33:30.041Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
               "ToolTip": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\HomemadeCakes\\Controllers\\LoginController.cs",
               "RelativeToolTip": "Controllers\\LoginController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T16:33:23.931Z"
+              "WhenOpened": "2024-06-24T16:33:23.931Z",
+              "EditorCaption": ""
             }
           ]
         }

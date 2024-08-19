@@ -1,5 +1,7 @@
-﻿using HomemadeCakes.Model;
+﻿using Amazon.Runtime.Internal;
+using HomemadeCakes.Model;
 using HomemadeCakes.ModelView;
+using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -94,6 +96,39 @@ namespace HomemadeCakes.Service
                 signingCredentials: creds
                 );
             return new JwtSecurityTokenHandler().WriteToken(token);
+            //Tham khao
+            //Chuyen pass
+            //sUserName = AESCrypto.Decrypt(sUserName);
+            //sPassword = AESCrypto.Decrypt(sPassword);
+
+            //check pass =>   var checkPass = Helper.VerifyHashedPassword(oUser.Password, password); 
+            //Chuyen pass
+
+            //var expired = DateTime.UtcNow.AddDays(1);
+            //var securityKey = Guid.NewGuid().ToString();
+            //var key = Encoding.ASCII.GetBytes(LVConfig.Settings.Secret);
+            //var tokenDescriptor = new SecurityTokenDescriptor
+            //{
+            //    Subject = new ClaimsIdentity(new[]
+            //{
+            //        new Claim(ClaimTypes.Name, oUser.AccountID),
+            //        new Claim(JwtRegisteredClaimNames.NameId, oUser.AccountID),
+            //        new Claim(JwtRegisteredClaimNames.Email, oUser.Email),
+            //        new Claim("FullName", oUser.AccountName),
+            //        new Claim("sk",securityKey),
+            //        new Claim("Mobile", oUser.Phone ?? ""),
+            //        new Claim("TenantID",RequestContext.RequestSession.Tenant),
+            //        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            //    }),
+            //    Issuer = "erm.lacviet.vn",
+            //    Audience = "erm.lacviet.vn",
+            //    Expires = expired,
+            //    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            //};
+
+            //var jwtTokenHandler = new JwtSecurityTokenHandler();
+            //var token = jwtTokenHandler.CreateToken(tokenDescriptor);
+            //var jwtToken = jwtTokenHandler.WriteToken(token);
         }
 
         public Task<bool> Register(RegisterRequest request)

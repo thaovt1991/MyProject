@@ -65,7 +65,6 @@ C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\Microsoft
 C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
-C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\HomemadeCakes.StaticWebAssets.xml
 C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\Microsoft.Extensions.Configuration.dll
 C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll
