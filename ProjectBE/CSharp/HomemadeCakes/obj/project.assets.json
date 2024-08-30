@@ -1108,6 +1108,16 @@
         "runtime": {
           "lib/net5.0/ZstdSharp.dll": {}
         }
+      },
+      "CakesManager/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/CakesManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CakesManager.dll": {}
+        }
       }
     }
   },
@@ -3124,10 +3134,16 @@
         "zstdsharp.port.0.7.3.nupkg.sha512",
         "zstdsharp.port.nuspec"
       ]
+    },
+    "CakesManager/1.0.0": {
+      "type": "project",
+      "path": "../CakesManager/CakesManager.csproj",
+      "msbuildProject": "../CakesManager/CakesManager.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "CakesManager >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.15",
       "Microsoft.Extensions.Configuration.FileExtensions >= 8.0.0",
       "Microsoft.Extensions.Configuration.Json >= 8.0.0",
@@ -3172,7 +3188,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\CakesManager\\CakesManager.csproj": {
+              "projectPath": "C:\\MyProject\\MyProject\\ProjectBE\\CSharp\\CakesManager\\CakesManager.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

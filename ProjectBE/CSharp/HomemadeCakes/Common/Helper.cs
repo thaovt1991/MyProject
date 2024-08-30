@@ -1,6 +1,11 @@
 ﻿using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System;
+using HomemadeCakes.Model.Common;
+using HomemadeCakes.Model;
+using System.Text.Json;
+using System.Threading.Tasks;
+using System.Reflection;
 
 namespace HomemadeCakes.Common
 {
@@ -80,6 +85,99 @@ namespace HomemadeCakes.Common
             }
 
             return flag;
+        }
+
+        //Invoker đến các asembly - Anh xa den business khasc
+        public static async Task<object> InvokeMethodAsync(RequestBase request , User user =null)
+        {
+            try
+            {
+                var response = new ResponseBase<object>();
+                var assemblyName = request?.AssemblyName ?? "Cakes";
+                var className = request?.ClassName ?? "Cakes.Business.Cakes";//Duog dan
+                var assembly = Assembly.Load(new AssemblyName(assemblyName));
+
+                var type = assembly.GetType(className);
+                if (type == null)
+                {
+                    response.ErrorCode = "400";
+                    response.Message = $"Class {className} not found in assembly {assemblyName}";
+                    //Log.Instance.Error(response.Message);
+                    return response;
+                }
+
+                var method = type.GetMethod(request?.MethodName ?? "", BindingFlags.Public | BindingFlags.Static | BindingFlags.Instance);
+                if (method == null)
+                {
+                    response.ErrorCode = "400";
+                    response.Message = $"Method {request?.MethodName ?? ""} not found in class {className}";
+                  //  Log.Error(response.Message);
+                    return response;
+                }
+
+                var parameters = request != null && request.Data != null ? new object[request.Data.Length] : new object[0];
+                var parameterInfos = method.GetParameters();
+
+                for (int i = 0; i < request?.Data?.Length; i++)
+                {
+                    var parameterType = parameterInfos[i].ParameterType;
+
+                    if (request.Data[i] is JsonElement jsonElement)
+                    {
+                        if (jsonElement.ValueKind == JsonValueKind.String)
+                        {
+                            parameters[i] = jsonElement.GetString() ?? string.Empty;
+                        }
+                        else if (jsonElement.ValueKind == JsonValueKind.Object)
+                        {
+                            parameters[i] = System.Text.Json.JsonSerializer.Deserialize(jsonElement.GetRawText(), parameterType) ?? string.Empty;
+                        }
+                    }
+                    else
+                    {
+                        parameters[i] = request.Data[i];
+                    }
+                }
+
+                var instance = method.IsStatic ? null : user != null ? Activator.CreateInstance(type, user) : Activator.CreateInstance(type);
+
+                var result = method.Invoke(instance, parameters);
+                response.Data = result ?? Array.Empty<object>();
+
+                if (result is Task taskResult)
+                {
+                    await taskResult.ConfigureAwait(false);
+                    return taskResult.GetType().GetProperty("Result")?.GetValue(taskResult) ?? response;
+                }
+                return response;
+            }
+            catch (InvalidOperationException ex)
+            {
+                var response = new ResponseBase<object>();
+                response.ErrorCode = ex.HResult.ToString();
+                response.Message = ex.Message;
+                //Log.Instance.Info(ex);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                var response = new ResponseBase<string>();
+                response.ErrorCode = ex.HResult.ToString();
+                response.Message = ex.Message;
+               // Log.Instance.Error(ex);
+                return response;
+            }
+
+        }
+
+        private string GetAutoNumberLogic(string refType)
+        {
+            var taskID = "TSK";
+            if (string.IsNullOrEmpty(refType)) taskID += "TM";
+            else
+                taskID += refType.Substring(0, 2);
+            taskID += DateTime.Now.ToString("yyMMddHHmmssfff");
+            return taskID;
         }
     }
 
