@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "HomemadeCakes/1.0.0": {
         "dependencies": {
+          "CakesManager": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.15",
           "Microsoft.Extensions.Configuration.FileExtensions": "8.0.0",
           "Microsoft.Extensions.Configuration.Json": "8.0.0",
@@ -1076,6 +1077,14 @@
         },
         "compile": {
           "lib/net5.0/ZstdSharp.dll": {}
+        }
+      },
+      "CakesManager/1.0.0": {
+        "runtime": {
+          "CakesManager.dll": {}
+        },
+        "compile": {
+          "CakesManager.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -3188,6 +3197,11 @@
       "sha512": "sha512-U9Ix4l4cl58Kzz1rJzj5hoVTjmbx1qGMwzAcbv1j/d3NzrFaESIurQyg+ow4mivCgkE3S413y+U9k4WdnEIkRA==",
       "path": "zstdsharp.port/0.7.3",
       "hashPath": "zstdsharp.port.0.7.3.nupkg.sha512"
+    },
+    "CakesManager/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
       "type": "referenceassembly",

@@ -13,7 +13,7 @@ export class UsersServiceService {
 
   }
 
-  public getOneAsync(id: number): Observable<any> {
+  public getOneAsync(id): Observable<any> {
     return this.http.get<any>(`${API_URL}/User/${id}`);
   }
 
@@ -31,21 +31,21 @@ export class UsersServiceService {
     methodName: string,
     data: Array<any>
   ): Observable<any> {
-    const host = API_URL + '/invoke';
+    const host = API_URL + '/Base/invokers';
     let request = new RequestModel();
-
     request.assemblyName = assemblyName;
     request.className = className;
     request.methodName = methodName;
     request.data = data;
-
-    return this.http.post(host, request).pipe(
+    debugger
+    return this.http.post<any>(host, request).pipe(
       map((response: any) => response),
       catchError(this.handleError)
     );
   }
   private handleError(error: HttpErrorResponse): Observable<never> {
     let errorMessage = 'Unknown error!';
+    console.error('An error occurred:', error);
     if (error.error instanceof ErrorEvent) {
       errorMessage = `Error: ${error.error.message}`;
     } else {

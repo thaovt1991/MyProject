@@ -8,5 +8,7 @@ namespace CakesManager.Models
 {
     public class Cakes
     {
+        public Guid RecID { get; set; }
+        public string CakeName { get; set; }
     }
 }

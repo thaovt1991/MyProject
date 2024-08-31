@@ -10,10 +10,10 @@ namespace HomemadeCakes.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BaseController : ControllerBase
+    public class BaseController : Controller //ControllerBase cua MVC
     {
         [HttpPost]
-        [Route("invoke")]
+        [Route("invokers")]
         public async Task<IActionResult> Exec([FromBody] RequestBase request)
         {
             using (var scope = HttpContext.RequestServices.CreateScope())

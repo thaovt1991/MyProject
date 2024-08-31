@@ -7,6 +7,7 @@ import { Component, ViewChild,
   SimpleChanges,
   ChangeDetectorRef,
 } from '@angular/core';
+import { UsersServiceService } from '../user-service/users-service.service';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,8 @@ export class LoginComponent implements OnInit{
   tokenFromUI: string = "0123456789123456";
   encrypted: any = "";
    constructor(
-    private changeDef : ChangeDetectorRef
+    private changeDef : ChangeDetectorRef,
+    private usersService : UsersServiceService
    ){
 
    }
@@ -64,8 +66,10 @@ export class LoginComponent implements OnInit{
       }).toString(CryptoJS.enc.Utf8);
   }
 
-  loginAccount(e ){
-    debugger
+  loginAccount(e){
+    this.usersService.exec("HomemadeCakes","HomemadeCakes.Business.UserLogBusiness","LoginAsync",[e?.userID,e?.password]).subscribe(res=>{
+      debugger
+    })
   }
 
   openForm(e: string){

@@ -11,7 +11,7 @@ namespace HomemadeCakes.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class UserController : Controller
+    public class UserController : ControllerBase
     {
 
         private readonly UserService _usersService;
@@ -27,7 +27,7 @@ namespace HomemadeCakes.Controllers
 
         }
 
-        [HttpGet("{id:length(24)}")]
+        [HttpGet("{id}")] //id:length(24)
         public async Task<ActionResult<User>> Get(string id)
         {
             var user = await _usersService.GetOneAsync(id);
@@ -48,7 +48,7 @@ namespace HomemadeCakes.Controllers
             return CreatedAtAction(nameof(Get), new { id = newUser.Id }, newUser);
         }
 
-        [HttpPut("{id:length(24)}")]
+        [HttpPut("{id}")]//:length(24)
         public async Task<IActionResult> Update(string id, User updatedBook)
         {
             var user = await _usersService.GetOneAsync(id);
@@ -65,7 +65,7 @@ namespace HomemadeCakes.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id:length(24)}")]
+        [HttpDelete("{id}")] //:length(24)
         public async Task<IActionResult> Delete(string id)
         {
             var user = await _usersService.GetOneAsync(id);

@@ -1,4 +1,4 @@
-using HomemadeCakes.Service;
+﻿using HomemadeCakes.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -45,12 +45,18 @@ namespace HomemadeCakes
 
             // MongoDB- cach 2
             //services.Configure<ConnectDatabaseSettings>(Configuration.GetSection("HomemadeCakesDatabase"));
+            //Enable CORS
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod()
+                 .AllowAnyHeader());
+            });
 
             services.AddSingleton<UserService>();
 
             services.AddControllers().AddJsonOptions(
             options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
-            //doi json va doc d�t json..
+            //doi json va doc dât json..
             services.AddControllers().AddNewtonsoftJson(options =>
             {
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
@@ -87,6 +93,7 @@ namespace HomemadeCakes
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());//Cho phé các request http gọi vào
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

@@ -1,0 +1,12 @@
+C:\MyProject\MyProject\ProjectBE\CSharp\CakesManager\bin\Debug\net5.0\CakesManager.deps.json
+C:\MyProject\MyProject\ProjectBE\CSharp\CakesManager\bin\Debug\net5.0\CakesManager.dll
+C:\MyProject\MyProject\ProjectBE\CSharp\CakesManager\bin\Debug\net5.0\CakesManager.pdb
+C:\MyProject\MyProject\ProjectBE\CSharp\CakesManager\obj\Debug\net5.0\CakesManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\MyProject\MyProject\ProjectBE\CSharp\CakesManager\obj\Debug\net5.0\CakesManager.AssemblyInfoInputs.cache
+C:\MyProject\MyProject\ProjectBE\CSharp\CakesManager\obj\Debug\net5.0\CakesManager.AssemblyInfo.cs
+C:\MyProject\MyProject\ProjectBE\CSharp\CakesManager\obj\Debug\net5.0\CakesManager.csproj.CoreCompileInputs.cache
+C:\MyProject\MyProject\ProjectBE\CSharp\CakesManager\obj\Debug\net5.0\CakesManager.sourcelink.json
+C:\MyProject\MyProject\ProjectBE\CSharp\CakesManager\obj\Debug\net5.0\CakesManager.dll
+C:\MyProject\MyProject\ProjectBE\CSharp\CakesManager\obj\Debug\net5.0\refint\CakesManager.dll
+C:\MyProject\MyProject\ProjectBE\CSharp\CakesManager\obj\Debug\net5.0\CakesManager.pdb
+C:\MyProject\MyProject\ProjectBE\CSharp\CakesManager\obj\Debug\net5.0\ref\CakesManager.dll

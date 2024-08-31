@@ -85,3 +85,5 @@ C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\obj\Debug\net5.0\staticweb
 C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.HomemadeCakes.props
 C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\obj\Debug\net5.0\Homemade.2E66FEDD.Up2Date
 C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\obj\Debug\net5.0\refint\HomemadeCakes.dll
+C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\CakesManager.dll
+C:\MyProject\MyProject\ProjectBE\CSharp\HomemadeCakes\bin\Debug\net5.0\CakesManager.pdb

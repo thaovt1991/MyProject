@@ -68,10 +68,10 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     BrowserAnimationsModule, //Thay đổi trạng thái mượt mà
     CommonModule,
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),//caì đặt loadder (cái nháy nháy ở góc)
-    NgxSkeletonLoaderModule.forRoot({
-      animation: 'pulse',
-      loadingText: 'This item is actually loading...', //là một module Angular chuyên dụng để tạo các hiệu ứng placeholder
-    }),
+    // NgxSkeletonLoaderModule.forRoot({
+    //   animation: 'pulse',
+    //   loadingText: 'This item is actually loading...', //là một module Angular chuyên dụng để tạo các hiệu ứng placeholder
+    // }),
   ],
   
   providers:[

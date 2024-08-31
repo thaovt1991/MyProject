@@ -93,8 +93,8 @@ namespace HomemadeCakes.Common
             try
             {
                 var response = new ResponseBase<object>();
-                var assemblyName = request?.AssemblyName ?? "Cakes";
-                var className = request?.ClassName ?? "Cakes.Business.Cakes";//Duog dan
+                var assemblyName = "HomemadeCakes";//request?.AssemblyName ?? "CakesManager"; //thuw vien
+                var className = "HomemadeCakes.Business.UserLogBusiness";//request?.ClassName ?? "CakesManager.Business.CakesBusiness";    //;//Duog dan
                 var assembly = Assembly.Load(new AssemblyName(assemblyName));
 
                 var type = assembly.GetType(className);
@@ -106,6 +106,7 @@ namespace HomemadeCakes.Common
                     return response;
                 }
 
+                request.MethodName = "LoginAsync";                //tesst 
                 var method = type.GetMethod(request?.MethodName ?? "", BindingFlags.Public | BindingFlags.Static | BindingFlags.Instance);
                 if (method == null)
                 {
@@ -116,28 +117,32 @@ namespace HomemadeCakes.Common
                 }
 
                 var parameters = request != null && request.Data != null ? new object[request.Data.Length] : new object[0];
-                var parameterInfos = method.GetParameters();
-
-                for (int i = 0; i < request?.Data?.Length; i++)
+                var parameterInfos = method.GetParameters(); //Lay kieru dữ liệu và param của methol
+                //cover data to praram Type
+                if(parameterInfos?.Length > 0 && request?.Data?.Length > 0)
                 {
-                    var parameterType = parameterInfos[i].ParameterType;
+                    for (int i = 0; i < request?.Data?.Length; i++)
+                    {
+                        var parameterType = parameterInfos[i].ParameterType;
 
-                    if (request.Data[i] is JsonElement jsonElement)
-                    {
-                        if (jsonElement.ValueKind == JsonValueKind.String)
+                        if (request.Data[i] is JsonElement jsonElement)
                         {
-                            parameters[i] = jsonElement.GetString() ?? string.Empty;
+                            if (jsonElement.ValueKind == JsonValueKind.String)
+                            {
+                                parameters[i] = jsonElement.GetString() ?? string.Empty;
+                            }
+                            else if (jsonElement.ValueKind == JsonValueKind.Object)
+                            {
+                                parameters[i] = System.Text.Json.JsonSerializer.Deserialize(jsonElement.GetRawText(), parameterType) ?? string.Empty;
+                            }
                         }
-                        else if (jsonElement.ValueKind == JsonValueKind.Object)
+                        else
                         {
-                            parameters[i] = System.Text.Json.JsonSerializer.Deserialize(jsonElement.GetRawText(), parameterType) ?? string.Empty;
+                            parameters[i] = request.Data[i];
                         }
-                    }
-                    else
-                    {
-                        parameters[i] = request.Data[i];
                     }
                 }
+                
 
                 var instance = method.IsStatic ? null : user != null ? Activator.CreateInstance(type, user) : Activator.CreateInstance(type);
 
