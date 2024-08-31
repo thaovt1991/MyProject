@@ -64,7 +64,7 @@ export class LoginComponent implements OnInit{
       }).toString(CryptoJS.enc.Utf8);
   }
 
-  loginAccount(e : any){
+  loginAccount(e ){
     debugger
   }
 
