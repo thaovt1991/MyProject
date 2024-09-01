@@ -8,6 +8,8 @@ import { Component, ViewChild,
   ChangeDetectorRef,
 } from '@angular/core';
 import { UsersServiceService } from '../user-service/users-service.service';
+import { ActivatedRoute, Route, Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -20,15 +22,18 @@ export class LoginComponent implements OnInit{
   responce=''
   tokenFromUI: string = "0123456789123456";
   encrypted: any = "";
+  
+
    constructor(
     private changeDef : ChangeDetectorRef,
-    private usersService : UsersServiceService
+    private usersService : UsersServiceService,
+    private router : Router
    ){
 
    }
    
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    
   }
 
    user ={
@@ -67,8 +72,18 @@ export class LoginComponent implements OnInit{
   }
 
   loginAccount(e){
+    //window.location.href = "/login"
+    let date = new Date() ; 
+    date.setTime(Date.now()+36000);//thoi gian duy tri cookies - expires expires
+    let expires = date.toUTCString();
+   // this.usersService.setCookie(`userName = ${e?.userName}`,null, null,expires)
+    this.usersService.setCookie(`userName = ${e?.userName}`,null, null,null,3600)
     this.usersService.exec("HomemadeCakes","HomemadeCakes.Business.UserLogBusiness","LoginAsync",[e?.userID,e?.password]).subscribe(res=>{
-      debugger
+       if(res){
+       this.router.navigate(['/home']);
+       }else {
+        //Thong bao
+       }
     })
   }
 
@@ -76,4 +91,6 @@ export class LoginComponent implements OnInit{
    this.isFormLogin = e== 'logIn' ;
    this.changeDef.detectChanges();
   }
+  //set cookie
+
 }

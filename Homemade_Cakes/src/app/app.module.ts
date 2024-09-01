@@ -24,6 +24,8 @@ import {
 } from 'ngx-ui-loader';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
+
+
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   bgsColor: '#187DE4',
   // bgsOpacity: 0.5,

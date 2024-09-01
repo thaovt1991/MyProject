@@ -6,6 +6,11 @@ using HomemadeCakes.Model;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Reflection;
+using Newtonsoft.Json.Linq;
+using System.Net.Http.Headers;
+using System.Net.Http;
+using System.Net;
+using System.Text;
 
 namespace HomemadeCakes.Common
 {
@@ -88,7 +93,7 @@ namespace HomemadeCakes.Common
         }
 
         //Invoker đến các asembly - Anh xa den business khasc
-        public static async Task<object> InvokeMethodAsync(RequestBase request , User user =null)
+        public static async Task<object> InvokeMethodAsync(RequestBase request, User user = null)
         {
             try
             {
@@ -112,14 +117,14 @@ namespace HomemadeCakes.Common
                 {
                     response.ErrorCode = "400";
                     response.Message = $"Method {request?.MethodName ?? ""} not found in class {className}";
-                  //  Log.Error(response.Message);
+                    //  Log.Error(response.Message);
                     return response;
                 }
 
                 var parameters = request != null && request.Data != null ? new object[request.Data.Length] : new object[0];
                 var parameterInfos = method.GetParameters(); //Lay kieru dữ liệu và param của methol
                 //cover data to praram Type
-                if(parameterInfos?.Length > 0 && request?.Data?.Length > 0)
+                if (parameterInfos?.Length > 0 && request?.Data?.Length > 0)
                 {
                     for (int i = 0; i < request?.Data?.Length; i++)
                     {
@@ -142,7 +147,7 @@ namespace HomemadeCakes.Common
                         }
                     }
                 }
-                
+
 
                 var instance = method.IsStatic ? null : user != null ? Activator.CreateInstance(type, user) : Activator.CreateInstance(type);
 
@@ -169,7 +174,7 @@ namespace HomemadeCakes.Common
                 var response = new ResponseBase<string>();
                 response.ErrorCode = ex.HResult.ToString();
                 response.Message = ex.Message;
-               // Log.Instance.Error(ex);
+                // Log.Instance.Error(ex);
                 return response;
             }
 
@@ -184,6 +189,48 @@ namespace HomemadeCakes.Common
             taskID += DateTime.Now.ToString("yyMMddHHmmssfff");
             return taskID;
         }
+
+        #region SetCookes  - Tham khao
+        //public async Task Login()
+        //{
+        //var data = new { UserName = "admin", Password = "admin", DBName = "LVERP" };
+
+        //ServicePointManager.Expect100Continue = true;
+        //ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls13 | SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11;
+        //ServicePointManager.ServerCertificateValidationCallback += (sender, cert, chain, error) => true;
+
+        //using (var client = new HttpClient())
+        //{
+        //    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+        //    var content = new StringContent(JsonConvert.SerializeObject(data), Encoding.UTF8, "application/json");
+        //    try
+        //    {
+        //        var response = await client.PostAsync("http://172.16.5.81:1112/MobileAPI/api/Auth/login", content);
+        //        response.EnsureSuccessStatusCode();
+
+        //        if (response == null || !response.IsSuccessStatusCode || response.Content == null) return; 
+        ///    DOC COOKIE
+        //        var cookies = response.Headers.GetValues("Set-Cookie");
+        //        if (cookies != null && cookies.Count() > 0)
+        //        {
+        //            var tk = cookies.FirstOrDefault(x => x.Contains("lvtk"));
+        //            if (tk != null)
+        //            {
+        //                var sIndx = tk.IndexOf(';');
+        //                string s = tk.Substring(0, sIndx).Replace("lvtk=", "");
+        //                token = Uri.UnescapeDataString(s);
+        //            };
+        //        }
+        //        var responseJson = await response.Content.ReadAsStringAsync();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Log.Instance.Error(ex);
+        //    }
+        //}
+        // }
+
+        #endregion
     }
 
 }

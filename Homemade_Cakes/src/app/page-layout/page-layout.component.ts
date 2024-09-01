@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UsersServiceService } from '../service/user-service/users-service.service';
 
 @Component({
   selector: 'app-page-layout',
@@ -49,7 +50,8 @@ export class PageLayoutComponent implements OnInit {
   isLogIn = true
 
   constructor(
-    private router : Router 
+    private router : Router ,
+    private userService : UsersServiceService
   ) {}
   addSlide() {
     this.slides.push({ img: 'http://placehold.it/350x150/777777' });
@@ -70,7 +72,11 @@ export class PageLayoutComponent implements OnInit {
     console.log('beforeChange');
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  this.userService.setCookie(`timeLogin = ${new Date()}`,'/home')
+  }
+
+
 
   click(e :any){
     this.router.navigate(['/', 'login'])

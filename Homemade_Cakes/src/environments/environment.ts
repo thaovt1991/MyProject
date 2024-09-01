@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   apiUrl: 'https://localhost:5001/api' , //Chú ý port -s va  ko s
-  tenant :'mystore'
+  tenant :'mystore',
+  shareCookieDomain :'domain =.homemadecakes.com' //de truy van ten mien chinh va mien phu vào cung 1 cookie
 };
 
 /*
