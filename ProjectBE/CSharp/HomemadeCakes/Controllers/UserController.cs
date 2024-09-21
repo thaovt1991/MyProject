@@ -1,16 +1,21 @@
-﻿using HomemadeCakes.Model;
+﻿using Amazon.Runtime.Internal.Util;
+using HomemadeCakes.Common;
+using HomemadeCakes.Model;
 using HomemadeCakes.ModelView;
 using HomemadeCakes.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
 namespace HomemadeCakes.Controllers
 {
-    [ApiController]
     [Route("api/[controller]")]
+    [ApiController]
     public class UserController : ControllerBase
     {
 
@@ -20,15 +25,15 @@ namespace HomemadeCakes.Controllers
             _usersService = UserService;
 
         [HttpGet]
-        public async Task<List<User>> Get()
+        public async Task<List<User>> GetAllAsync()
         {
-           var test = await _usersService.GetAsync();
+            var test = await _usersService.GetAsync();
             return test;
 
         }
 
         [HttpGet("{id}")] //id:length(24)
-        public async Task<ActionResult<User>> Get(string id)
+        public async Task<ActionResult<User>> GetOneAsync(string id)
         {
             var user = await _usersService.GetOneAsync(id);
 
@@ -41,11 +46,24 @@ namespace HomemadeCakes.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(User newUser)
+        [AllowAnonymous] // Attribute để bỏ qua xác thực
+        public async Task<IActionResult> CreatedUserAsync([FromForm] RegisterRequestBase regisUser)
         {
+            if (string.IsNullOrEmpty(regisUser.UserName) || string.IsNullOrEmpty(regisUser.Password))
+            {
+               return BadRequest();
+            }
+            var newUser = new User();
+            newUser.Password = Helper.HashPassword(regisUser.Password); //AESCrypto.Encrypt(regisUser.Password);
+            newUser.UserID = regisUser.UserID;
+            newUser.UserName = regisUser.UserName;
+          
+
             await _usersService.CreateAsync(newUser);
 
-            return CreatedAtAction(nameof(Get), new { id = newUser.Id }, newUser);
+            return Ok(newUser);
+            //return CreatedAtAction(nameof(CreatedUserAsync), new { id = newUser.Id }, newUser);
+            // return CreatedAtAction("AddNew", new { id = newUser.Id }, newUser);
         }
 
         [HttpPut("{id}")]//:length(24)

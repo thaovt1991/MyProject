@@ -9,7 +9,13 @@ namespace HomemadeCakes.Model
 {
     public class User
     {
-
+        public User()
+        {
+            this.Id = ObjectId.GenerateNewId().ToString();
+            this.RecID = Guid.NewGuid();
+            this.CreatedOn = DateTime.Now;
+          
+        }
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }

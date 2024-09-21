@@ -113,6 +113,22 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "EasyCaching.CSRedis": {
+              "target": "Package",
+              "version": "[1.9.2, )"
+            },
+            "EasyCaching.Core": {
+              "target": "Package",
+              "version": "[1.9.2, )"
+            },
+            "EasyCaching.InMemory": {
+              "target": "Package",
+              "version": "[1.9.2, )"
+            },
+            "EasyCaching.Redis": {
+              "target": "Package",
+              "version": "[1.9.2, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.15, )"
@@ -141,6 +157,26 @@
               "target": "Package",
               "version": "[2.24.0, )"
             },
+            "Serilog.Enrichers.ClientInfo": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
+            "Serilog.Formatting.Compact": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Serilog.Sinks.Async": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Serilog.Sinks.Grafana.Loki": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            },
             "Swashbuckle": {
               "target": "Package",
               "version": "[5.6.0, )"
@@ -165,9 +201,21 @@
               "target": "Package",
               "version": "[6.5.0, )"
             },
+            "System.IO": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.IO.FileSystem": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[7.4.0, )"
+            },
+            "fasterflect": {
+              "target": "Package",
+              "version": "[3.0.0, )"
             }
           },
           "imports": [

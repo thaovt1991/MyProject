@@ -11,12 +11,16 @@ using System.Net.Http.Headers;
 using System.Net.Http;
 using System.Net;
 using System.Text;
+using MongoDB.Bson;
+using System.Collections.Generic;
+using System.Linq;
+
 
 namespace HomemadeCakes.Common
 {
     public sealed class Helper // hoi sealed
     {
-
+        //CODE A HOAN
         private const int PBKDF2_ITER_COUNT = 1000;
 
         private const int PBKDF2_SUBKEY_LENGTH = 32;
@@ -92,6 +96,7 @@ namespace HomemadeCakes.Common
             return flag;
         }
 
+        //THAM KHAO CODE NGOAI
         //Invoker đến các asembly - Anh xa den business khasc
         public static async Task<object> InvokeMethodAsync(RequestBase request, User user = null)
         {
@@ -231,6 +236,31 @@ namespace HomemadeCakes.Common
         // }
 
         #endregion
+
+        public static object BsonValueToObject(BsonValue value)
+        {
+            switch (value.BsonType)
+            {
+                case BsonType.Boolean:
+                    return value.AsBoolean;
+                case BsonType.DateTime:
+                    return value.ToUniversalTime();
+                case BsonType.Double:
+                    return value.AsDouble;
+                case BsonType.Int32:
+                    return value.AsInt32;
+                case BsonType.Int64:
+                    return value.AsInt64;
+                case BsonType.String:
+                    return value.AsString;
+                default:
+                    return value?.ToString() ?? "";
+            }
+        }
+        public static Dictionary<string, object> BsonDocumentToDictionary(BsonDocument doc)
+        {
+            return doc.ToDictionary(element => element.Name, element => BsonValueToObject(element.Value));
+        }
     }
 
 }
