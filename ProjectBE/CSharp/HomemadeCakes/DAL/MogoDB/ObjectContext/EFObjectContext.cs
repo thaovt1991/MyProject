@@ -339,10 +339,10 @@ namespace HomemadeCakes.DAL.MogoDB.ObjectContext
             }
 
             ObjectStateManager objectStateManager = objStateManagers[name];
-            foreach (TEntity item in GetCollection<TEntity>().AsQueryable().Where(predicate, values).ToList())
-            {
-                objectStateManager.SetDelete(item);
-            }
+            //foreach (TEntity item in GetCollection<TEntity>().AsQueryable().Where(predicate, values).ToList())
+            //{
+            //    objectStateManager.SetDelete(item);
+            //}
         }
 
         public int SaveChanges(bool transaction = false)

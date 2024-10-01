@@ -1,4 +1,5 @@
-﻿using HomemadeCakes.Common.Http;
+﻿using HomemadeCakes.Common.Entity;
+using HomemadeCakes.Common.Http;
 using System.Collections.Generic;
 
 namespace HomemadeCakes.Common.Interface

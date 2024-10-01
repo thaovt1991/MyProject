@@ -16,8 +16,12 @@
 		<PackageReference Include="EasyCaching.CSRedis" Version="1.9.2" />
 		<PackageReference Include="EasyCaching.InMemory" Version="1.9.2" />
 		<PackageReference Include="EasyCaching.Redis" Version="1.9.2" />
+		<PackageReference Include="EasyCaching.Serialization.MessagePack" Version="1.9.2" />
 		<PackageReference Include="fasterflect" Version="3.0.0" />
+		<PackageReference Include="MessagePack" Version="2.5.140" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.15" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
 		<PackageReference Include="MongoDB.Bson" Version="2.24.0" />
@@ -28,6 +32,7 @@
 		<PackageReference Include="Serilog.Formatting.Compact" Version="2.0.0" />
 		<PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
 		<PackageReference Include="Serilog.Sinks.Console" Version="5.0.1" />
+		<PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
 		<PackageReference Include="Serilog.Sinks.Grafana.Loki" Version="8.3.0" />
 		<PackageReference Include="Swashbuckle" Version="5.6.0" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Reflection;
 using HomemadeCakes.Common.Config;
 using Serilog;
 using Serilog.Configuration;//Serilog.Configuration là một namespace trong thư viện Serilog của .NET, cung cấp các lớp và phương thức giúp bạn cấu hình chi tiết cách thức các sự kiện log được ghi lại.
@@ -11,6 +12,8 @@ using Serilog.Configuration;//Serilog.Configuration là một namespace trong th
 using Serilog.Events;
 using Serilog.Formatting.Compact;////2.0,là một thư viện trong hệ sinh thái Serilog, một thư viện ghi log mạnh mẽ và linh hoạt cho các ứng dụng .NET. Thư viện này được thiết kế đặc biệt để định dạng các sự kiện log (log events) thành một định dạng JSON gọn gàng và dễ đọc, thường được gọi là "compact JSON".
 using Serilog.Sinks.Grafana.Loki;//8.3
+                                 //Serilog.Sinks.File - #region Assembly Serilog.Sinks.File, Version=5.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10 - tai Serilog.Sinks.File
+
 
 namespace HomemadeCakes.Common
 {

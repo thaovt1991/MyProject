@@ -129,9 +129,25 @@
               "target": "Package",
               "version": "[1.9.2, )"
             },
+            "EasyCaching.Serialization.MessagePack": {
+              "target": "Package",
+              "version": "[1.9.2, )"
+            },
+            "MessagePack": {
+              "target": "Package",
+              "version": "[2.5.140, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.15, )"
+            },
+            "Microsoft.Extensions.Caching.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "Microsoft.Extensions.Configuration.FileExtensions": {
               "target": "Package",
@@ -172,6 +188,10 @@
             "Serilog.Sinks.Console": {
               "target": "Package",
               "version": "[5.0.1, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Serilog.Sinks.Grafana.Loki": {
               "target": "Package",

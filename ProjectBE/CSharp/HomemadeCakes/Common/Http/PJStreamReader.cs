@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel;
 using System;
+using Fasterflect;
 
 namespace HomemadeCakes.Common.Http
 {
@@ -67,7 +68,7 @@ namespace HomemadeCakes.Common.Http
                         }
                         else
                         {
-                            obj = LVJsonHelper.Deserializer<T>(text);
+                            obj = PJJsonHelper.Deserializer<T>(text);
                         }
                     }
                 }

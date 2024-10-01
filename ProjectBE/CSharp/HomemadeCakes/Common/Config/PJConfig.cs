@@ -86,19 +86,19 @@ namespace HomemadeCakes.Common.Config
         {
             get
             {
-                //string text = "LVClientSetting";
-                //ClientSetting clientSetting = CacheManager.InProcess.Get<ClientSetting>(text)?.Value;
-                //if (clientSetting == null || !clientSetting.Loaded)
-                //{
-                //    clientSetting = AppSettings.Get<ClientSetting>();
-                //    if (clientSetting == null)
-                //    {
-                //        clientSetting = new ClientSetting();
-                //    }
+                string text = "LVClientSetting";
+                ClientSetting clientSetting = CacheManager.InProcess.Get<ClientSetting>(text)?.Value;
+                if (clientSetting == null || !clientSetting.Loaded)
+                {
+                    clientSetting = AppSettings.Get<ClientSetting>();
+                    if (clientSetting == null)
+                    {
+                        clientSetting = new ClientSetting();
+                    }
 
-                //    clientSetting.Loaded = true;
-                //    CacheManager.InProcess.Add(text, clientSetting);
-                //}
+                    clientSetting.Loaded = true;
+                    //CacheManager.InProcess.Add(text, clientSetting);
+                }
 
                 return clientSetting;
             }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System;
+using System.Linq;
 
 namespace HomemadeCakes.Common.Http
 {
@@ -7,7 +8,7 @@ namespace HomemadeCakes.Common.Http
     {
         private bool _disposed;
 
-        public LVError Error { get; set; }
+        public PJError Error { get; set; }
 
         public List<object> MsgBodyData { get; set; }
 
