@@ -1,10 +1,12 @@
 ﻿using HomemadeCakes.ModelView;
 using HomemadeCakes.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 
 namespace HomemadeCakes.Controllers
 {
@@ -16,10 +18,13 @@ namespace HomemadeCakes.Controllers
         public LoginController(UserService UserService) =>
             _usersService = UserService;
 
-        [HttpPut]
-        public async Task<string> GetLoginAsync([FromBody] LoginRequest login)
+        [HttpPut("login")]
+        [AllowAnonymous]//bo qua xac thực
+        public async Task<IActionResult> GetLoginAsync([FromBody] LoginRequest login)
         {
-            return await _usersService.Authencate(login);
+            if(ModelState.IsValid) return BadRequest(ModelState);
+            var token = await _usersService.Authencate(login);
+            return Ok(token);
         }
 
        

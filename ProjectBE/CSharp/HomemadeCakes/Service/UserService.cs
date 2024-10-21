@@ -1,8 +1,9 @@
 ﻿using Amazon.Runtime.Internal;
+using HomemadeCakes.Common;
 using HomemadeCakes.Model;
 using HomemadeCakes.ModelView;
 using Microsoft.AspNetCore.Components.Routing;
-using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration;//Doc tu config ra
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
@@ -14,15 +15,17 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace HomemadeCakes.Service
 {
     public class UserService : IUserService
     {
         private readonly IMongoCollection<User> _usersDBContext;
-        private readonly IConfiguration _config;
+        private readonly IConfiguration _config; //Doc tu config ra
         private const string ConnectionString = "mongodb://localhost:27017";
         private const string DatabaseName = "HomemadeCakesDatabase";
         private const string UsersCollectionName = "Users";
+     
         public UserService(IOptions<ConnectDatabaseSettings> conectDatabaseSettings, IConfiguration config)
         {
             var client = new MongoClient(ConnectionString);
@@ -76,25 +79,45 @@ namespace HomemadeCakes.Service
         public async Task<User?> GetOneByUserNameAsync(string userName) =>
            await _usersDBContext.Find(x => x.UserName == userName).FirstOrDefaultAsync();
 
+        public async Task<User?> GetOneByUserIDAsync(string userID) =>
+           await _usersDBContext.Find(x => x.UserID == userID).FirstOrDefaultAsync();
+
+        public  async Task<bool> IsExitUserIDAsync(string userID)
+        {
+           return await _usersDBContext.Find(x => x.UserID == userID).AnyAsync() ;
+        }
+        
+
         public async Task<string> Authencate(LoginRequest request)
         {
             //pas chua mã hóa
-            var user = await GetOneByUserNameAsync(request.UserName);
+            var user = await GetOneByUserIDAsync(request.UserID);
             if (user == null) return null;
+            var checkPass =  Helper.VerifyHashedPassword(user.Password, request.Password);
+           
+            if (!checkPass)
+            {
+                Log.Instance.Error("Passwok khong dung");
+                return null;
+            }
+
             var claims = new[]
             {
-                new Claim(ClaimTypes.Email, user.Email),
-                 new Claim(ClaimTypes.GivenName, user.FirstName),
-                 new Claim(ClaimTypes.Email, user.Email)
+                 new Claim(ClaimTypes.Email, user.Email??"vothao.tin@gmail.com"),
+                 new Claim(ClaimTypes.GivenName, user.UserName),
+                 new Claim(ClaimTypes.UserData, user.UserName)
             };
             //var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Tokens: Key"]));
- 
-            var keystringJwt = "cuocdoivandepsaotinhyeuvandepsao22011991love15071996somuchs";
+
+            //var keystringJwt = "cuocdoivandepsaotinhyeuvandepsao22011991love15071996somuchs";
+            var keystringJwt = _config["Tokens: Key"];
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keystringJwt));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
             var token = new JwtSecurityToken(
+                //  _config["Tokens: Issuer"],
+                //  -xac thuc noi goi issuer :' https://yourwebapp.com' de vao Khi một yêu cầu đến API với một token có iss (issuer) bằng https://yourwebapp.com, hệ thống sẽ xác thực token và cho phép truy cập.
                 claims: claims,
-                expires: DateTime.Now,
+                expires: DateTime.Now.AddMinutes(5),
                 signingCredentials: creds
                 );
             return new JwtSecurityTokenHandler().WriteToken(token);

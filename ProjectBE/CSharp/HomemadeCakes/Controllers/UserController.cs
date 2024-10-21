@@ -11,11 +11,13 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;//de do con fix thiet lap
 
 namespace HomemadeCakes.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class UserController : ControllerBase
     {
 
@@ -52,6 +54,12 @@ namespace HomemadeCakes.Controllers
             if (string.IsNullOrEmpty(regisUser.UserName) || string.IsNullOrEmpty(regisUser.Password))
             {
                return BadRequest();
+            }
+            var isExit = await _usersService.IsExitUserIDAsync(regisUser.UserID);
+            if(isExit)
+            {
+                Log.Instance.Error("Da ton tai user ID");
+                return null;
             }
             var newUser = new User();
             newUser.Password = Helper.HashPassword(regisUser.Password); //AESCrypto.Encrypt(regisUser.Password);

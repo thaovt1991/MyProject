@@ -12,7 +12,7 @@ namespace HomemadeCakes.Model
         public User()
         {
             this.Id = ObjectId.GenerateNewId().ToString();
-            this.RecID = Guid.NewGuid();
+            this.RecID = Guid.NewGuid().ToString();
             this.CreatedOn = DateTime.Now;
           
         }
@@ -20,7 +20,7 @@ namespace HomemadeCakes.Model
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
-        public Guid RecID { get; set; }
+        public string RecID { get; set; }
 
         public string FirstName { get; set; }
 

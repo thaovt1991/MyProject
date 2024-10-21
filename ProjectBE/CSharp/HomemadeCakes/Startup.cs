@@ -17,17 +17,19 @@ using HomemadeCakes.Model;
 using MongoDB.Driver;
 using Amazon.Runtime.Internal.Transform;
 using EasyCaching.InMemory;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace HomemadeCakes
 {
     public class Startup
     {
+        public IConfiguration _config { get; }
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _config = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+      
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -45,7 +47,8 @@ namespace HomemadeCakes
             //services.AddMvc();
 
             // MongoDB- cach 2
-            //services.Configure<ConnectDatabaseSettings>(Configuration.GetSection("HomemadeCakesDatabase"));
+            services.Configure<ConnectDatabaseSettings>(_config.GetSection("HomemadeCakesDatabase"));
+            //services.AddIden
             //Enable CORS
             services.AddCors(c =>
             {
@@ -89,6 +92,37 @@ namespace HomemadeCakes
                         },  new List<string>()
                 } }); 
             });
+
+            // Cấu hình JWT Authentication
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+
+                    //ValidIssuer = "yourdomain.com", // Issuer hợp lệ
+                    //ValidAudience = "yourdomain.com", // Audience hợp lệ
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Tokens: Key"])) // Secret Key dùng để mã hóa
+                };
+            });
+
+            services.AddControllers();
+
+
+
+
+
+
+
+
 
             //Set cookie - Xem lai cho này đang loi
             // services.AddSession(options =>
