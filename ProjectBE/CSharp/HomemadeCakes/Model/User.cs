@@ -34,6 +34,8 @@ namespace HomemadeCakes.Model
 
         public string Category { get; set; }
 
+        public string RoleID { get; set; }
+
         public DateTime CreatedOn { get; set; }
 
         public string CreatedBy { get; set; }

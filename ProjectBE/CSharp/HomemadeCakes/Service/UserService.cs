@@ -105,17 +105,18 @@ namespace HomemadeCakes.Service
             {
                  new Claim(ClaimTypes.Email, user.Email??"vothao.tin@gmail.com"),
                  new Claim(ClaimTypes.GivenName, user.UserName),
-                 new Claim(ClaimTypes.UserData, user.UserName)
+                 new Claim(ClaimTypes.UserData, user.UserName),
+                 new Claim("Role", user.Category)
             };
-            //var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Tokens: Key"]));
-
-            //var keystringJwt = "cuocdoivandepsaotinhyeuvandepsao22011991love15071996somuchs";
-            var keystringJwt = _config["Tokens: Key"];
+            
+            var keystringJwt = _config["Tokens:Key"];
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keystringJwt));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
             var token = new JwtSecurityToken(
                 //  _config["Tokens: Issuer"],
+                _config["Tokens:Issuer"],
                 //  -xac thuc noi goi issuer :' https://yourwebapp.com' de vao Khi một yêu cầu đến API với một token có iss (issuer) bằng https://yourwebapp.com, hệ thống sẽ xác thực token và cho phép truy cập.
+                _config["Tokens:Audience"],
                 claims: claims,
                 expires: DateTime.Now.AddMinutes(5),
                 signingCredentials: creds

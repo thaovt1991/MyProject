@@ -22,7 +22,7 @@ namespace HomemadeCakes.Controllers
         [AllowAnonymous]//bo qua xac thực
         public async Task<IActionResult> GetLoginAsync([FromBody] LoginRequest login)
         {
-            if(ModelState.IsValid) return BadRequest(ModelState);
+            if(!ModelState.IsValid) return BadRequest(ModelState);
             var token = await _usersService.Authencate(login);
             return Ok(token);
         }

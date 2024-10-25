@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HomemadeCakes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+362a0cb4c889d5bcf7e87842a3a8ba53dd850338")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b14bcd4d423d0176fdcb693b3c059d6769cc0f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("HomemadeCakes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HomemadeCakes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -18,6 +18,8 @@ using MongoDB.Driver;
 using Amazon.Runtime.Internal.Transform;
 using EasyCaching.InMemory;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace HomemadeCakes
 {
@@ -94,6 +96,7 @@ namespace HomemadeCakes
             });
 
             // Cấu hình JWT Authentication
+            
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -108,9 +111,9 @@ namespace HomemadeCakes
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
 
-                    //ValidIssuer = "yourdomain.com", // Issuer hợp lệ
-                    //ValidAudience = "yourdomain.com", // Audience hợp lệ
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Tokens: Key"])) // Secret Key dùng để mã hóa
+                    ValidIssuer = _config["Tokens:Issuer"], // Issuer hợp lệ
+                    ValidAudience = _config["Tokens:Audience"], // Audience hợp lệ
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Tokens:Key"])) // Secret Key dùng để mã hóa
                 };
             });
 
@@ -172,7 +175,7 @@ namespace HomemadeCakes
             services.AddEasyCaching(options =>
             {
                 //use memory cache
-                options.UseInMemory(Configuration, "default", "easycaching:inmemory");
+                options.UseInMemory(_config, "default", "easycaching:inmemory");
             });
         }
 
@@ -187,10 +190,10 @@ namespace HomemadeCakes
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "HomemadeCakes v1"));
             }
 
-            app.UseHttpsRedirection();
-            app.UseAuthentication();
-            app.UseRouting();
 
+            app.UseHttpsRedirection();
+            app.UseRouting();
+            app.UseAuthentication();
             app.UseAuthorization();
             //swagger
             app.UseSwagger();
