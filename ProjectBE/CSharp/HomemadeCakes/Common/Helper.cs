@@ -103,8 +103,8 @@ namespace HomemadeCakes.Common
             try
             {
                 var response = new ResponseBase<object>();
-                var assemblyName = "HomemadeCakes";//request?.AssemblyName ?? "CakesManager"; //thuw vien
-                var className = "HomemadeCakes.Business.UserLogBusiness";//request?.ClassName ?? "CakesManager.Business.CakesBusiness";    //;//Duog dan
+                var assemblyName = request?.AssemblyName ?? "HomemadeCakes"; //thuw vien
+                var className = request?.ClassName ?? "HomemadeCakes.Business.CakesBusiness";    //;//Duog dan
                 var assembly = Assembly.Load(new AssemblyName(assemblyName));
 
                 var type = assembly.GetType(className);
@@ -115,8 +115,16 @@ namespace HomemadeCakes.Common
                     //Log.Instance.Error(response.Message);
                     return response;
                 }
+                
+                if (string.IsNullOrEmpty(request.MethodName) )
+                {
+                    response.ErrorCode = "400";
+                    response.Message = $"Method Name {request.MethodName} not found in assembly {className}";
+                    //Log.Instance.Error(response.Message);
+                    return response;
+                }
 
-                request.MethodName = "LoginAsync";                //tesst 
+                //tesst 
                 var method = type.GetMethod(request?.MethodName ?? "", BindingFlags.Public | BindingFlags.Static | BindingFlags.Instance);
                 if (method == null)
                 {

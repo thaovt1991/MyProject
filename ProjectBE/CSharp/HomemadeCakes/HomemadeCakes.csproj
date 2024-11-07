@@ -5,13 +5,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Compile Remove="Model\NewFolder\**" />
-	  <Content Remove="Model\NewFolder\**" />
-	  <EmbeddedResource Remove="Model\NewFolder\**" />
-	  <None Remove="Model\NewFolder\**" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="EasyCaching.Core" Version="1.9.2" />
 		<PackageReference Include="EasyCaching.CSRedis" Version="1.9.2" />
 		<PackageReference Include="EasyCaching.InMemory" Version="1.9.2" />

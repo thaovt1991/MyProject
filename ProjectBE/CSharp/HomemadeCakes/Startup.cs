@@ -20,6 +20,7 @@ using EasyCaching.InMemory;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using HomemadeCakes.Service.NumberService;
 
 namespace HomemadeCakes
 {
@@ -59,6 +60,7 @@ namespace HomemadeCakes
             });
 
             services.AddSingleton<UserService>();
+            services.AddSingleton<NumberService>();
 
             services.AddControllers().AddJsonOptions(
             options => options.JsonSerializerOptions.PropertyNamingPolicy = null);

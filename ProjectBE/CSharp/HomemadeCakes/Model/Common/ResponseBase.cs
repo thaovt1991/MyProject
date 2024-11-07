@@ -1,4 +1,6 @@
-﻿namespace HomemadeCakes.Model.Common
+﻿using System;
+
+namespace HomemadeCakes.Model.Common
 {
     public class ResponseBase<T> : ErrorResponse
     {
@@ -8,6 +10,7 @@
     #region Error
     public class ErrorResponse
     {
+        public bool Error { get; set; } = false;
         public string ErrorCode { get; set; } = string.Empty;
         public string Message { get; set; } = string.Empty;
 
@@ -16,10 +19,11 @@
     #endregion
 
     #region token
-    public class TokenResponse : ErrorResponse
+    public class LoginResponse : ErrorResponse
     {
         public string Token { get; set; }
-        public long Expiress { get; set; }
+        public DateTime Expiress { get; set; }
+        public long Maxage { get; set; }
         public string UserID { get; set; }
 
     }

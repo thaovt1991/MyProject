@@ -18,7 +18,7 @@ namespace HomemadeCakes.Controllers
         public LoginController(UserService UserService) =>
             _usersService = UserService;
 
-        [HttpPut("login")]
+        [HttpPost("login")]
         [AllowAnonymous]//bo qua xac thực
         public async Task<IActionResult> GetLoginAsync([FromBody] LoginRequest login)
         {

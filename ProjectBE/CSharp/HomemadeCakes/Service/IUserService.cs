@@ -1,4 +1,5 @@
 ﻿
+using HomemadeCakes.Model.Common;
 using HomemadeCakes.ModelView;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace HomemadeCakes.Service
 {
     public interface IUserService
     {
-        Task<string> Authencate(LoginRequest request);
+        Task<object> Authencate(LoginRequest request);
         Task<bool> Register(RegisterRequest request);
     }
 }
